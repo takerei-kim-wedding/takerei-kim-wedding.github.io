@@ -13,8 +13,8 @@ html {
     height: 100%;
     width: 100%;
 
-    @media (min-width: 1024px) {
-        width: 1024px;
+    @media (min-width: 920px) {
+        width: 920px;
     }
 }
 
@@ -47,7 +47,7 @@ html {
     overflow-y: auto;
     color: white;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     position: relative;
 
     @media (min-width: 768px) {
@@ -126,7 +126,6 @@ html {
     margin-bottom: 0;
 }
 
-/* General button styles */
 button {
     border: none;
     cursor: pointer;
@@ -163,25 +162,21 @@ button.show-account-details {
     margin-top: 56px;
 }
 
-/* Hover state */
 button:hover {
     box-shadow: inset 0px 0px 6px 7px #00000024;
 }
 
-/* Focus-visible state for keyboard navigation */
 button:focus-visible {
     box-shadow: inset 0px 0px 6px 7px #00000024;
     outline: none;
 }
 
-/* Active state */
 button:active {
     box-shadow: inset 0px 0px 6px 7px #00000024;
     background-color: #8DA8C3;
     color: white;
 }
 
-/* Remove outline when focus is not visible */
 button:focus {
     outline: none;
 }

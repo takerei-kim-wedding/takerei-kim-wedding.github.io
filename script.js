@@ -5,7 +5,7 @@ function copyAccount() {
   navigator.clipboard
     .writeText(copyText.value)
     .then(() => {
-      const tooltip = document.getElementById("copyTooltip"); // Get the existing tooltip
+      const tooltip = document.getElementById("copyTooltip");
       copyIcon.classList.remove("fa-copy");
       copyIcon.classList.add("fa-clipboard-check");
 
@@ -43,7 +43,6 @@ function closeMap() {
   document.getElementById("mapModal").style.display = "none";
 }
 
-// Close the modal when the user clicks anywhere outside of the modal content
 window.onclick = function (event) {
   var modal = document.getElementById("mapModal");
   if (event.target == modal) {
