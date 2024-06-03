@@ -1,0 +1,247 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: #8ea7c1;
+    text-shadow: 0px 2px 10px #687e93;
+    height: 100%;
+    width: 100%;
+
+    @media (min-width: 1024px) {
+        width: 1024px;
+    }
+}
+
+.sky {
+    background-color: #8ea7c1;
+    overflow: auto;
+    max-height: 45%;
+    margin-top: 20%;
+    mask-image: linear-gradient(to bottom,
+            transparent,
+            white 20px,
+            white calc(100% - 20px),
+            transparent);
+
+    @media (min-width: 600px) {
+        margin-top: unset;
+        max-height: 35%;
+    }
+}
+
+.image-container {
+    background-image: url("images/Invitation_BG.jpg");
+    background-size: cover;
+    background-position: top;
+    height: 100%;
+}
+
+.information {
+    padding: 24px;
+    overflow-y: auto;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    position: relative;
+
+    @media (min-width: 768px) {
+        font-size: 18px;
+    }
+}
+
+.opening-paragraph {
+    margin-bottom: 32px;
+}
+
+.korean {
+    font-family: "HYMyeongJo-Extra", "Apple SD Gothic Neo", sans-serif;
+    line-height: 1.5;
+}
+
+.english {
+    font-family: "Crimson Text", serif;
+    font-style: italic;
+}
+
+.names-table {
+    display: flex;
+    justify-content: center;
+    margin-top: 56px;
+}
+
+.names-table p {
+    margin: 4px 0;
+}
+
+.names-table .left-column {
+    text-align: right;
+}
+
+.names-table .right-column {
+    text-align: left;
+}
+
+.names-table .middle-column {
+    padding: 0 32px;
+}
+
+.date-location {
+    display: flex;
+    flex-direction: column;
+    margin-top: 56px;
+}
+
+.hidden {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    visibility: hidden;
+}
+
+.show-account {
+    max-height: 120px;
+    opacity: 1;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    visibility: visible;
+}
+
+.copy-account-number {
+    margin: 8px 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    text-decoration: none; 
+}
+
+.address {
+    margin-top: 56px;
+    margin-bottom: 0;
+}
+
+/* General button styles */
+button {
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+button.directions {
+    font-size: 12px;
+    margin-top: 4px;
+    margin-bottom: 16px;
+    padding: 2px;
+    width: fit-content;
+    align-self: center;
+}
+
+button.show-account-details,
+button.directions {
+    background-color: #8DA8C3;
+    color: white;
+    outline: 2px solid #bdd3eb;
+}
+
+button.copy {
+    background-color: white;
+    color: #8DA8C3;
+    font-size: 14px;
+}
+
+button.show-account-details {
+    margin-top: 56px;
+}
+
+/* Hover state */
+button:hover {
+    box-shadow: inset 0px 0px 6px 7px #00000024;
+}
+
+/* Focus-visible state for keyboard navigation */
+button:focus-visible {
+    box-shadow: inset 0px 0px 6px 7px #00000024;
+    outline: none;
+}
+
+/* Active state */
+button:active {
+    box-shadow: inset 0px 0px 6px 7px #00000024;
+    background-color: #8DA8C3;
+    color: white;
+}
+
+/* Remove outline when focus is not visible */
+button:focus {
+    outline: none;
+}
+
+
+.tooltip {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.2s, opacity 0.5s ease-in-out;
+    margin-top: 8px;
+}
+
+.tooltip.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.closing-paragraph.korean {
+    margin-top: 56px;
+}
+
+.closing-paragraph.english {
+    margin-top: 32px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    position: relative;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#mapImage {
+    width: 100%;
+    height: auto;
+}
