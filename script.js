@@ -49,3 +49,12 @@ window.onclick = function (event) {
     closeMap();
   }
 };
+
+document.querySelector('.sky').addEventListener('scroll', function() {
+  var scrollDown = document.querySelector('.scroll-down');
+  if (this.scrollTop > 10) {
+      scrollDown.style.opacity = '0';
+  } else {
+      scrollDown.style.opacity = '1';
+  }
+});
