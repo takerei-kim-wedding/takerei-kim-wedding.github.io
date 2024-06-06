@@ -244,43 +244,28 @@ button:focus {
 
 .scroll-down {
     position: absolute;
-    bottom: 15px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     transition: opacity 0.3s ease;
+    color: white;
 }
 
-.scroll-span {
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-bottom: 3px solid white;
-    border-right: 3px solid white;
-    transform: rotate(45deg);
-    margin: -10px;
-    animation: animate 2s infinite;
+.scroll-down .material-symbols-outlined {
+    font-size: 2rem;
+    animation: handAnim 1.6s infinite;
 }
 
-.scroll-span.span2 {
-    animation-delay: -0.2s;
-}
-
-.scroll-span.span3 {
-    animation-delay: -0.4s;
-}
-
-@keyframes animate {
+@keyframes handAnim {
     0% {
+        transform: translateY(20px);
         opacity: 0;
-        transform: rotate(45deg) translate(-20px, -20px);
     }
-
     50% {
         opacity: 1;
     }
-
     100% {
+        transform: translateY(0);
         opacity: 0;
-        transform: rotate(45deg) translate(20px, 20px);
     }
 }
