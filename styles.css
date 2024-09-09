@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "HYMyeongJo-Extra";
+    src: url("/fonts/korean.h2mjre.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body,
 html {
     height: 100%;
